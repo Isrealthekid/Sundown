@@ -1,8 +1,13 @@
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy';
+    font-family: neu;
 }
 
 html, body {
@@ -16,14 +21,113 @@ html, body {
 }
 
 #page1{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color:#EFEAE3;
     position: relative;
+    padding: 0 2vw;
 }
 
 nav{
+    padding: 2vw 0vw;
     height: 100px;
     width: 100%;
-    background-color: red;
+    /* background-color: red;  */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #8a8a8a89;
+    border-radius: 50px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    font-size: 17px;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left : 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+
+#nav-part2 h4 a{
+    color: black;
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+}
+
+#nav-part2 h4:hover a{
+    color: white;
+
+}
+
+#center{
+height: 65vh;
+width: 100%;
+background-color: orange;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+border-bottom: 1px solid black;
+padding-bottom: 2.5vw;
+}
+
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+
+}
+
+#page1 video {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46 vw;
+    height: 36vw;
+    background-color: #FE320A;
+    /* border-radius: 50%; */
+
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 65vh;
+    filter: blur(20px);
 }
