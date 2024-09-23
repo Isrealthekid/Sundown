@@ -323,14 +323,59 @@ nav h3 {
 }
 
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
+    padding: 4vw 0;
 }
 
 .elem{
     height: 150px;
     width: 100%;
+    border-top: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding:0 2vw ;
+    position: relative;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
     background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease .55s; 
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+#elem-container{
+
+}
+
+#fixed-image{
+    height: 30vw;
+    width: 23vw;
+    background-color: red;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    top: 25%;
+    left: 50%;
+    display: none;
+    background-size:cover ;
+    background-position: center;
 }
