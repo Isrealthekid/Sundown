@@ -25,12 +25,14 @@
 html, body {
     height: 100%;
     width: 100%;
+    
 }
 
 #main {
     /* background-color: #000; */
     position: relative;
     z-index: 10;
+    overflow-x: hidden;
 }
 
 #page1 {
@@ -379,9 +381,10 @@ nav h3 {
 }
 
 #page4{
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     background-color: #EFEAE3;
+    padding:10vw 2vw;
 }
 
 #page5{
@@ -392,16 +395,84 @@ nav h3 {
 
 #footer{
     position: fixed;   
-    height: 100vh;
+    height: 105vh;
     width: 100%;   
     z-index: 9;
     bottom: 0;
     background-color: #000;
     color: #fff;
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
 }
 
 #footer h1{
-    font-size: 10vw;
+    font-size: 23vw;
 }
+
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+#footer-bottom{
+     border-top: 1px solid #dadada;
+     height: 10vh;
+     width: 100%; 
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    /* background: #fff; */
+   width: 30%;
+    border-left: 1px solid #000;
+  }
+
+@media (max-width:600px) {
+        
+    #page1 {
+        min-height: 100vh;
+        width: 100vw;
+        background-color: #EFEAE3;
+        position: relative;
+        padding: 0 5vw;
+    }
+
+    nav {
+        padding: 8vw 0vw;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        justify-content: space-between;
+    }
+
+    nav img{
+        height: 9vh;
+    }
+
+    #nav-part2 {
+        display: none;
+        align-items: center;
+        gap: 1vw;
+    }
+
+    nav h3{
+        display: block;
+        padding: 2vw 5vw;
+        border: 1px solid #dadada;
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 200;
+        color: #000000bb;
+        
+}
+
