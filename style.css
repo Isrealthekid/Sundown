@@ -451,7 +451,34 @@ nav h3 {
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    /* position: relative; */
 
+}
+
+#full-div1 #resp{
+   /* background-color: #fea40a; */
+    flex-direction: column;
+    display: flex;
+    right: 0;
+    margin: 2vw;
+}
+
+#resp h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 6vw; 
+    font-family: neu;
+    transition: ease-out .7s;
+}
+
+#resp h4:hover a {
+   
+   font-weight: 200;
+    font-size: 8vw; 
+    font-family: neu;
 }
 
 @media (max-width:600px) {
@@ -491,7 +518,14 @@ nav h3 {
         color: #000000bb;
         cursor: pointer;
     }
- 
+    
+    #full-div1 h4 a{
+        font-size: 10vw;
+        color: #000;
+        z-index: 99;
+        
+    }
+
     #center {
         height: 62vh;
         width: 100%;
@@ -694,3 +728,71 @@ nav h3 {
 }
 }
 
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #150a0a;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    color: transparent;
+    font-size: 4vw;
+    background:linear-gradient(to right, orange, orangered) ;
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    
+}
+
+#loader h1:nth-child(1) {
+    animation-name: load;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+}
+
+#loader h1:nth-child(2) {
+    animation-delay: 2.2s;
+    animation-name: load;
+    animation-duration: 1.2s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+}
+
+#loader h1:nth-child(3) {
+    animation-delay: 3.4s;
+    animation-name: load;
+    animation-duration: 1.3s;
+    /* animation-delay: 1s; */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* #footer{
+    background: linear-gradient(to top right, black, orangered);
+} */
